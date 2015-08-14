@@ -1,4 +1,3 @@
-setwd("~/coursera/Getting and Cleaning Data/Course Project")
 # source("run_analysis.R")
 
 #----------------------------------------------------------------------

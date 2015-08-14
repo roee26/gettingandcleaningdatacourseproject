@@ -19,3 +19,10 @@ The file can be loaded back using the command:
 ~~~{r}
 data <- read.table('SubjectActionMeanOfMeasure.txt', header = TRUE)
 ~~~
+
+## Script analysis steps
+1. The original dataset is divided into two groups of files that are identical in structure: test data and training data. The script merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. The activity names for each row is located in a separate file as codes from 1 to 6. The script translate the codes to the meaningful activity names found in the file activity_labels.txt and adds the descriptive activity names to the data set. This step also adds the subject column that identifies each individual participant in the experiment using a number from 1 - 30, located in a separate files y_train.txt and y_test.txt
+4. Appropriately labels the data set with descriptive variable names using several steps to delete characters like parenthesis and dots, and then replace abbreviations with the actual word.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
